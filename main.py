@@ -14,7 +14,7 @@ async def multilingual(
     audio_file: UploadFile = File(...),  # Uploaded audio file
     model: str = Form("saaras:v4"),
     language_code: str = Form("unknown"),
-    mode: str = Form("translate"),
+    mode: str = Form("translit"),
     sample_rate: str = Form("16000"),
 ):
     # Use provided key from form field, otherwise fallback to the hardcoded token
