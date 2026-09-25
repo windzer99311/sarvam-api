@@ -5,6 +5,9 @@ import requests
 app = FastAPI()
 
 SARVAM_URL = "https://api.sarvam.ai/speech-to-text"
+@app.get("/")
+def read_root():
+    return {"message": "It's working!"}
 @app.post("/multilingual")
 async def multilingual(
     key: str = Form(None),
